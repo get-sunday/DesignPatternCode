@@ -18,7 +18,6 @@ public class Client {
                      public void onSuccess() {
 
                      }
-
                      @Override
                      public void onFail(String message) {
                          LogUtils.show(message);
