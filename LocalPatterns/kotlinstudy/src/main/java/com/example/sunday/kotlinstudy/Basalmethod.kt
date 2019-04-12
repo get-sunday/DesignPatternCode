@@ -182,6 +182,12 @@ class Basalmethod : AppCompatActivity() {
                 }
     }
 
+    fun testLable(){
+        loop@ for(i in 1.. 100){
+
+        }
+    }
+
 
 
 }
