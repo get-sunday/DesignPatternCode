@@ -1,1 +1,1 @@
-include ':app', ':JavaDesignPatterns'
+include ':app', ':JavaDesignPatterns', ':kotlinstudy'

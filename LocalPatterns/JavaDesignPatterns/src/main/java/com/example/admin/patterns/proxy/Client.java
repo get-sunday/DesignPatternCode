@@ -1,15 +1,12 @@
 package com.example.admin.patterns.proxy;
 
 import com.example.admin.patterns.LogUtils;
-import com.example.admin.patterns.factorymethodtwee.ExportDbOperator;
-import com.example.admin.patterns.factorymethodtwee.ExportExcelOperator;
 
-import java.io.FileOutputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-import sun.misc.ProxyGenerator;
+
 
 public class Client {
      public static void main(String [] args){
@@ -18,15 +15,15 @@ public class Client {
          IProcessor processor = new Processor();
          IProcessor proxy = (IProcessor) Proxy.newProxyInstance(processor.getClass().getClassLoader(),new Class[]{IProcessor.class}, new DynamicProxy(processor));
 
-         byte[] bytes = ProxyGenerator.generateProxyClass(proxy.getClass().getSimpleName(), processor.getClass().getInterfaces());
-         try {
-             FileOutputStream fileOutputStream = new FileOutputStream("out/proxy.class");
-             fileOutputStream.write(bytes);
-             fileOutputStream.flush();
-             fileOutputStream.close();
-         }catch ( Exception e){
-
-         }
+//         byte[] bytes = ProxyGenerator.generateProxyClass(proxy.getClass().getSimpleName(), processor.getClass().getInterfaces());
+//         try {
+//             FileOutputStream fileOutputStream = new FileOutputStream("out/proxy.class");
+//             fileOutputStream.write(bytes);
+//             fileOutputStream.flush();
+//             fileOutputStream.close();
+//         }catch ( Exception e){
+//
+//         }
          proxy.doMethod();
 
      }
