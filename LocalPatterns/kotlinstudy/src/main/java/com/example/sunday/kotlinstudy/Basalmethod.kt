@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity
 /**
  *
  * file https://www.kotlincn.net/docs/reference/idioms.html
+ *
+ *   ** 返回和跳转
+ *
  */
 class Basalmethod : AppCompatActivity() {
 
