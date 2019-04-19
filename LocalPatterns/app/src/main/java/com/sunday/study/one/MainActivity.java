@@ -1,6 +1,8 @@
 package com.sunday.study.one;
 
 import android.content.ClipData;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,18 +33,39 @@ public class MainActivity extends AppCompatActivity {
 
     String url = "https://www.factzone.cn/yh/api/10071019";
     String img = "http://file.me.factzone.cn/cover_url/CqyNzlpXKJOAS7SgAAGL8_QM6B8044.jpg";
+    private Items items;
+    private MultiTypeAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        RecyclerView recyclerView =  new RecyclerView(this);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
 
-        setContentView(recyclerView);
+        setContentView(R.layout.activity_main);
+        RecyclerView recyclerView = findViewById(R.id.rv);
+        final SwipeRefreshLayout swipe = findViewById(R.id.swipe);
+        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipe.setRefreshing(false);
+                items.addAll(getDatas());
+                adapter.notifyDataSetChanged();
+            }
+        });
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
+
+        adapter = new MultiTypeAdapter();
+        adapter.register(Module.class,new ItemAdapter(this));
+        items = new Items();
+        items.addAll(getDatas());
+        recyclerView.setAdapter(adapter);
+        adapter.setItems(items);
+        adapter.notifyDataSetChanged();
+
+    }
+
+    public List<Module> getDatas(){
         List<Module>  datas = new ArrayList<>();
         datas.add(new Module(img));
         datas.add(new Module(img));
@@ -51,36 +75,16 @@ public class MainActivity extends AppCompatActivity {
         datas.add(new Module(img));
         datas.add(new Module(img));
         datas.add(new Module(img));
+        return  datas;
+    }
 
 
-        MultiTypeAdapter adapter = new MultiTypeAdapter();
-        adapter.register(Module.class,new ItemAdapter(this));
-        recyclerView.setAdapter(adapter);
-        adapter.setItems(datas);
-        adapter.notifyDataSetChanged();
 
-
+    /**
+     *
+     */
+    private void  mains(){
 
     }
 
-    //飞航不错的时候的啦 Event Logs
-    public void requestVideoList(final boolean isRefreshing) {
-//
-//        HashMap<String, String> params = new HashMap<>();
-//        params.put("offset", String.valueOf(offset));
-//        params.put("limit", "30");
-//        params.put("userId",String.valueOf("37928"));
-//        OkGo.<VideosBean>post(url)
-//                .upJson(new JSONObject(params).toString())
-//                .execute(new JsonCallback<VideosBean>(VideosBean.class) {
-//                    @Override
-//                    public void onSuccess(VideosBean data) {
-//
-//                    }
-//                    }
-//
-//                });
-
-
-    }
 }

@@ -42,11 +42,9 @@ public class ItemAdapter extends ItemViewBinder<Module, ItemAdapter.MyHolder> {
                     .skipMemoryCache(true) //是否跳过内存缓存
                     .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
         }
-//        getTestInstance();
-        Glide.with(activity.getApplicationContext())
-                .load(item.isSuccess())
+        Glide.with(activity)
+                .load(item.imgss)
                 .apply(testOptions)
-//                .transition(new DrawableTransitionOptions().crossFade())
                 .into(holder.imgs);
     }
 
