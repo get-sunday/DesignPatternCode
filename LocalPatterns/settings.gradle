@@ -1,1 +1,1 @@
-include ':app', ':JavaDesignPatterns', ':kotlinstudy', ':SundayHttp', ':sundayhttp2'
+include ':app', ':JavaDesignPatterns', ':kotlinstudy', ':SundayHttp', ':sundayhttp2', ':dataStructor'

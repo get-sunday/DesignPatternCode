@@ -8,6 +8,7 @@ import java.util.Random;
 public class DataStructorTwee {
 
 
+    //and then so a goods friends and then then a goods friends
     @Test
     public  void test(){
         System.out.println(4>>1);
@@ -24,6 +25,8 @@ public class DataStructorTwee {
         System.out.println(list);
         radixSort(list);
         System.out.println(list);
+        System.out.println(list);
+        System.out.println("hello sunday");
 
     }
 

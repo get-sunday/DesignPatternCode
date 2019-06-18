@@ -5,6 +5,11 @@ public class Base {
     private String msg;
     private int code;
 
+    public static void mains{
+        //this is agoodsfirends youcanse sede a godi friends san dthen
+      //so afrin
+    }
+
     public String getMsg() {
         return msg;
     }
