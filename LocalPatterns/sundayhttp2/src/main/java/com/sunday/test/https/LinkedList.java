@@ -105,7 +105,7 @@ public class LinkedList<E> {
                 target.prev = newNode;//4
             }else {
                 pre.next = newNode;//3
-                target.prev = newNode;//4
+                target.prev = newNode;//4[][] [] [] [] [] [][]
             }
             size++;
         }
