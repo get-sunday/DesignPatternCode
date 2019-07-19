@@ -7,6 +7,13 @@ public class HeroNode {
     public  HeroNode leftNode;
     public  HeroNode rightNode;
 
+     //线索链表字段
+    //lefttype == 0 指向的左子树，1则是前驱节点
+    //rightType == 0 指向的左子树，1则是后继节点
+    public  int leftType ;
+    public  int rightType;
+
+
     public HeroNode(int no, String name) {
         this.no = no;
         this.name = name;

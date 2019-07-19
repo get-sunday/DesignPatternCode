@@ -46,15 +46,18 @@ public class test {
 //        binaryTree.preOrder();
 //
 
-        int  [] arr = {1,2,3,4,5,6,7};
-        ArrBinaryTree binaryTrees = new ArrBinaryTree(arr);
-        binaryTrees.preOrder();
+//        int  [] arr = {1,2,3,4,5,6,7};
+//        ArrBinaryTree binaryTrees = new ArrBinaryTree(arr);
+//        binaryTrees.preOrder();
+//
+        int value = (5/2);
+        System.out.println(value);
 
     }
 
 
 
-
+    //日志的books and then so a go
     public static void  binarySearch(){
 
         BinaryTree binaryTree = new BinaryTree();
