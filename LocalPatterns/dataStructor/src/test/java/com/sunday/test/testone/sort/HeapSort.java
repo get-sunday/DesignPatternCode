@@ -16,7 +16,7 @@ public class HeapSort {
     public void test(){
 
         int[] arr = new int[8000000];
-        for (int i = 0; i < 8000000; i++) {
+        for (int i = 0; i < 80000; i++) {
             arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
         }
 

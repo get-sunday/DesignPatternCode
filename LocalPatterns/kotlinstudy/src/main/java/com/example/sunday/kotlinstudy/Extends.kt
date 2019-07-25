@@ -17,11 +17,8 @@ class Derived(p: Int) : Base(p){
 
 //如果类没有主构造函数，那么每个次构造函数必须使用super关键字初始化其基类类型
 class  MyView : View{
-
      constructor(ctx: Context) : super(ctx)
-
      constructor(ctx: Context,attrs: AttributeSet) : super(ctx,attrs)
-
 
 }
 

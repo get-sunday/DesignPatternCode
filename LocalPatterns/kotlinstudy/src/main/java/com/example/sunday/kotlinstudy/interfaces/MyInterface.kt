@@ -21,6 +21,16 @@ class Child : MyInterface{
 
 }
 
+class TweeChild : MyInterface{
+    override fun bar() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override val prop: Int
+        get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+
+}
+
 //接口继承
 interface  Named {
       val name: String
