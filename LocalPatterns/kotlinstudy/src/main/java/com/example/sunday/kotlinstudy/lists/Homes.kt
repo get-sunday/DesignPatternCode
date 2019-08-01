@@ -118,6 +118,4 @@ fun main(args:  Array<String>){
     val numbersSortedSet = sortedSetOf("one", "two", "three", "four")
     println(numbersSortedSet.elementAt(0)) // elements are stored in the ascending order
 
-
-
 }
