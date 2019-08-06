@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/JavaDesignPatterns" />
+            <option value="$PROJECT_DIR$/JetpackDemo" />
             <option value="$PROJECT_DIR$/SundayHttp" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dataStructor" />

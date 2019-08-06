@@ -6,7 +6,7 @@ import com.sunday.study.one.mvps.demo3.base.BasePresenter;
 public class LoginPresenter extends BasePresenter<LoginView> {
 
       LoginModule loginModule;
-    public LoginPresenter(){
+      public LoginPresenter(){
         this.loginModule  = new LoginModule();
 
     }
