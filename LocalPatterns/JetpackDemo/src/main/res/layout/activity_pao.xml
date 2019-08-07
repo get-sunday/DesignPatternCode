@@ -6,6 +6,10 @@
         <variable
             name="vm"
             type="com.example.sunday.jetpackdemo.viewmodel.PaoViewModel"/>
+         <variable
+             name="activity"
+             type="com.example.sunday.jetpackdemo.view.PaoActivity" />
+        
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,10 +20,10 @@
         android:layout_height="wrap_content"
         android:onClick="@{()->vm.loadArticle()}"
      android:text="load article"/>
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@{vm.articleDetail}"
-    tools:text="点击按钮，调用ViewModel中的loadArticle方法，通过DataBinding更新UI"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{vm.articleDetail}"
+              tools:text="点击按钮，调用ViewModel中的loadArticle方法，通过DataBinding更新UI"/>
     </LinearLayout>
 </layout>

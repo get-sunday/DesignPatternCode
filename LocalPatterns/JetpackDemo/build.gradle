@@ -26,13 +26,7 @@ android {
     dataBinding {
         enabled = true
     }
-    kapt {
-        javacOptions {
-            // Increase the max count of errors from annotation processors.
-            // Default is 100.
-            option("-Xmaxerrs", 500)
-        }
-    }
+
 
 }
 
@@ -59,6 +53,23 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.google.code.gson:gson:2.8.0'
+
+    //ViewModel
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+
+    //autodispose
+    implementation 'com.uber.autodispose:autodispose:0.8.0'
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents:0.8.0'
+
+    implementation 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
+
+    // If you want to use Kotlin syntax
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-kotlin:3.0.0'
+
+// If you want to use Kotlin syntax with Android Lifecycle
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-android-lifecycle-kotlin:3.0.0'
 
 //    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
 //    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
