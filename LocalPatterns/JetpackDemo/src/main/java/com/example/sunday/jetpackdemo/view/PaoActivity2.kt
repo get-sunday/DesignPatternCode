@@ -62,7 +62,6 @@ class PaoActivity2 : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
-
 //          mViewMode.loadArticle().compose(bin )
 //        mViewMode.loadArticle().compose(bindLifeCycle)
 //        mViewMode.loadArticle()

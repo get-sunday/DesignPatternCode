@@ -41,6 +41,10 @@ suspend fun main() {
 //    println("Hello ")
 //    job.join()
 }
+public fun getTimes() : String{
+
+    return  "sundays"
+}
 
 
 

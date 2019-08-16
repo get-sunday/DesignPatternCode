@@ -38,7 +38,6 @@ class PaoActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-
         mViewMode.loadArticle()
                 .subscribe { _, error -> dispatchError(error) }
 

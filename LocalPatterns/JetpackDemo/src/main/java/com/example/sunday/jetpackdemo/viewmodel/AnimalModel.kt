@@ -7,7 +7,6 @@ class AnimalModel(val animal : Animal) {
 
      val info = "${animal.name} 叫了 ${animal.shoutCount} 声音.."
      fun shout(){
-
           animal.shoutCount++
 
      }

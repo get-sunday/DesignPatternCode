@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.sunday.study.one.MainActivity;
-
+//失去了 其中的拓展性质
 public class TestLeakActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         Button button = new Button(this);
         button.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -26,10 +26,18 @@ public class TestLeakActivity extends AppCompatActivity {
             }
         });
         setContentView(button);
-    }
-    private void goMain(){
-        Intent intent = new Intent(this,MainActivity.class);
 
-        startActivity(new Intent(this,MainActivity.class));
     }
+
+    //配置的方式的认证的结果的啦, 配置的方式的认证的过程的啦！
+    private void goMain(){
+
+    }
+
+    //Show only selected and then so a junk foods
+    private void  mains(){
+
+
+    }
+
 }
