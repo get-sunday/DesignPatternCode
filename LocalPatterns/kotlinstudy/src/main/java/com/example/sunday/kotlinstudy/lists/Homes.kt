@@ -117,5 +117,6 @@ fun main(args:  Array<String>){
     println(numbers.elementAt(3))
     val numbersSortedSet = sortedSetOf("one", "two", "three", "four")
     println(numbersSortedSet.elementAt(0)) // elements are stored in the ascending order
+    var names =  listOf("sunday","twee","threee","four","names","and sunday")
 
 }

@@ -19,7 +19,9 @@ suspend fun main() {
 //    Thread.sleep(2000L) // 阻塞主线程 2 秒钟来保证 JVM 存活
 
 
-    //桥接阻塞与非阻塞的世界
+    //桥接模式的方式的啦！啊哈哈 人生的配置的啦
+    //So a  junk foods
+    //So that there is  a junk foods and then so a junk foods
 
     GlobalScope.launch {
         delay(1000L)
@@ -45,6 +47,8 @@ public fun getTimes() : String{
 
     return  "sundays"
 }
+
+fun getSunday() : String = "sundays"
 
 
 

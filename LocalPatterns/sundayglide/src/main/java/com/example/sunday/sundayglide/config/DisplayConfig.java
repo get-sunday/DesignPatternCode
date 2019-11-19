@@ -8,5 +8,4 @@ public class DisplayConfig {
     public int loadFailImage  = -1;
 
 
-
 }

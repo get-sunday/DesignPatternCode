@@ -52,3 +52,7 @@ fun getValues(
 
     return 1
 }
+
+fun getUserAge(name :  String) : String{
+    return "Sunday"
+}

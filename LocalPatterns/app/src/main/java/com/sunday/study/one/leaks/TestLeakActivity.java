@@ -6,7 +6,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.bumptech.glide.Glide;
 
 //失去了 其中的拓展性质
 public class TestLeakActivity extends AppCompatActivity {
@@ -26,6 +29,7 @@ public class TestLeakActivity extends AppCompatActivity {
             }
         });
         setContentView(button);
+//        Glide.with(this).load("hello").into(new ImageView(this));
 
     }
 

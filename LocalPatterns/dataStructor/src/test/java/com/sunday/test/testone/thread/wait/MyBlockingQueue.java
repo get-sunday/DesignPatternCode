@@ -25,7 +25,6 @@ public class MyBlockingQueue<E> {
 
     public synchronized  E take() throws InterruptedException {
         while (queue.isEmpty()) {
-
             wait();
         }
         E poll = queue.poll();
